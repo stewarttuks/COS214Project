@@ -2,6 +2,7 @@
 #define ROCKET_H
 
 #include <iostream>
+#include "RocketState.h"
 
 using namespace std;
 
@@ -10,12 +11,20 @@ class Rocket
     private:
         string name;
         int fuel;
+        RocketState* state;
 
     public:
         Rocket();
-        ~Rocket();
+        Rocket(string, int, RocketState*);
+        virtual ~Rocket();
 
-        void launch();
+        virtual void launch() = 0;
+        virtual void prepLaunch() = 0;
+
+        //getters
+        string getname();
+        int getfuel();
+        RocketState* getstate();
 
 };
 
