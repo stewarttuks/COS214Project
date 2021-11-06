@@ -3,9 +3,11 @@
 
 #include <iostream>
 #include "RocketState.h"
+#include "Cargo.h"
 
 using namespace std;
 
+class RocketState;
 class Rocket
 {
     private:
@@ -19,7 +21,10 @@ class Rocket
         virtual ~Rocket();
 
         virtual void launch() = 0;
+        virtual void testLaunch() = 0;
         virtual void prepLaunch() = 0;
+
+        virtual void getSummary() = 0;
 
         //getters
         string getname();
