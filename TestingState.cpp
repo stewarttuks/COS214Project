@@ -1,5 +1,13 @@
 #include "TestingState.h"
 
-void TestingState::handleRequest(Rocket* rocket, string command){
+TestingState::TestingState(){
+
+}
+
+TestingState::~TestingState(){
+    
+}
+
+void TestingState::handleRequest(Rocket* rocket, string request){
 
 }
