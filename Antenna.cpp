@@ -1,7 +1,7 @@
 #include "Antenna.h"
 
 Antenna::Antenna(){
-    signal = "";
+
 }
 
 Antenna::~Antenna(){

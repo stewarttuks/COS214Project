@@ -15,7 +15,7 @@ class Antenna
         string signal;
     public:
         Antenna();
-        ~Antenna();
+        virtual ~Antenna();
 
         virtual void attach(Satellite*) = 0;
         virtual void detach(Satellite*) = 0;
