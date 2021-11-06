@@ -2,8 +2,10 @@
 #define ROCKETSTATE_H
 
 #include <iostream>
+#include "Rocket.h"
 
 using namespace std;
+class Rocket;
 
 class RocketState
 {
@@ -12,6 +14,8 @@ class RocketState
     public:
         RocketState();
        virtual ~RocketState();
+
+       virtual void handleRequest(Rocket*, string) = 0;
 
 };
 
