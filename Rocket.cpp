@@ -1,9 +1,9 @@
 #include "Rocket.h"
 
-Rocket::Rocket(string n, int f, RocketState* s){
+Rocket::Rocket(string n, int f, RocketState* rs){
     name = n;
     fuel = f;
-    state = s;
+    state = rs;
 }
 
 Rocket::~Rocket(){
