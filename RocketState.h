@@ -12,7 +12,7 @@ class RocketState
     private:
 
     public:
-        RocketState();
+       RocketState();
        virtual ~RocketState();
 
        virtual void handleRequest(Rocket*, string) = 0;

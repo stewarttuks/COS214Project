@@ -12,7 +12,7 @@ class RefurbishState : public RocketState
 
     public:
         RefurbishState();
-        ~RefurbishState();
+        virtual ~RefurbishState();
 
         void handleRequest(Rocket*, string);
 

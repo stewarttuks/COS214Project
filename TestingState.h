@@ -12,7 +12,7 @@ class TestingState : public RocketState
 
     public:
         TestingState();
-        ~TestingState();
+        virtual ~TestingState();
 
         void handleRequest(Rocket*, string);
 

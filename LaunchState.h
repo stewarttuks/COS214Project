@@ -11,7 +11,7 @@ class LaunchState : public RocketState{
 
     public:
         LaunchState();
-        ~LaunchState();
+        virtual ~LaunchState();
 
         void handleRequest(Rocket*, string);
 
