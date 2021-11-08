@@ -63,7 +63,7 @@ int main(){
 
     //Create Satellite for Falcon Nine
      SatelliteFactory* factory = new InternetSatelliteFactory();                                 //createFactory
-     vector<Satellite*> FalconNineSatellites = factory->createSatellites(80);
+     vector<Satellite*> FalconNineSatellites = factory->CreateAllSatellites(80);
 
     Rocket* FalconNineRocket = new FalconNine(FalconNineSatellites.size(), FalconNineSatellites, FalconNinename, FalconNinefuel, FalconNinestate);
     FalconNineRocket->getSummary();
@@ -77,7 +77,7 @@ int main(){
     RocketState* FalconHeavystate = NULL;
 
     //Create Satellite for Falcon Nine
-     vector<Satellite*> FalconHeavySatellites = factory->createSatellites(100);
+     vector<Satellite*> FalconHeavySatellites = factory->CreateAllSatellites(100);
 
     Rocket* FalconHeavyRocket = new FalconHeavy(FalconHeavySatellites.size(), FalconHeavySatellites, FalconHeavyname, FalconHeavyfuel, FalconHeavystate);
     FalconHeavyRocket->getSummary();
