@@ -11,7 +11,7 @@ class ControlPanel : public ControlRoom
     private:
 
     public:
-        ControlPanel(vector<Button*>);
+        ControlPanel(Button**);
         virtual ~ControlPanel();
 
 };

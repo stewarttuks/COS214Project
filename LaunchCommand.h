@@ -8,12 +8,9 @@ using namespace std;
 
 class LaunchCommand : public Command
 {
-    private:
-
     public:
-        LaunchCommand();
+        LaunchCommand(Rocket*);
         virtual ~LaunchCommand();
-
         void execute();
 
 };

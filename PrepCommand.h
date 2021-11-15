@@ -8,12 +8,9 @@ using namespace std;
 
 class PrepCommand : public Command
 {
-    private:
-
     public:
-        PrepCommand();
+        PrepCommand(Rocket*);
         virtual ~PrepCommand();
-
         void execute();
 
 };

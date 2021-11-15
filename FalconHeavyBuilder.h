@@ -8,13 +8,16 @@ using namespace std;
 
 class FalconHeavyBuilder : public RocketBuilder
 {
-    private:
+    
 
     public:
         FalconHeavyBuilder();
         ~FalconHeavyBuilder();
 
         void addParts();
+
+    protected:
+    
         void addShell();
         void addCores();
         void addMerlinEngine();

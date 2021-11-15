@@ -2,23 +2,31 @@
 #define ROCKETDIRECTOR_H
 
 #include <iostream>
-#include <vector>
 
 #include "RocketBuilder.h"
+#include "FalconHeavyBuilder.h"
+#include "FalconNineBuilder.h"
+#include "CrewDragonBuilder.h"
+#include "DragonBuilder.h"
 #include "Rocket.h"
 
 using namespace std;
 
 class RocketDirector
 {
-    private:
-        vector<RocketBuilder*> builders;
     public:
         RocketDirector();
         virtual ~RocketDirector();
-
-        void build();
+        void build(int);
         Rocket* getRocket();
+    
+    private:
+        Rocket* built;
+        RocketBuilder** builders;
+        // Builder 0 : CrewDragon
+        // Builder 1 : Dragon
+        // Builder 2 : FalconHeavy
+        // Builder 3 : FalconNine
 
 };
 

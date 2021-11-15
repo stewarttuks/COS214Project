@@ -8,13 +8,16 @@ using namespace std;
 
 class Command
 {
-    private:
-        Rocket* reciever;
+    
     public:
-        Command();
+        Command(Rocket*);
+        void setRocket(Rocket*);
         virtual ~Command();
+        virtual void execute() = 0;
+        // virtual void stop() = 0;
 
-       virtual void execute() = 0;
+    protected:
+        Rocket* receiver;
 
 };
 

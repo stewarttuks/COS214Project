@@ -1,6 +1,6 @@
 #include "PrepCommand.h"
 
-PrepCommand::PrepCommand(){
+PrepCommand::PrepCommand(Rocket* r):Command(r){
 
 }
 
@@ -9,5 +9,5 @@ PrepCommand::~PrepCommand(){
 }
 
 void PrepCommand::execute(){
-    
+    receiver->prepLaunch();
 }

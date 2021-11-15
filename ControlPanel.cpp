@@ -1,9 +1,9 @@
 #include "ControlPanel.h"
 
- ControlPanel::ControlPanel(vector<Button*> b){
-
- }
+ControlPanel::ControlPanel(Button** b){
+    buttons =b;
+}
  
- ControlPanel::~ControlPanel(){
+ControlPanel::~ControlPanel(){
 
- }
+}

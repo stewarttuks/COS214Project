@@ -1,6 +1,6 @@
 #include "LaunchCommand.h"
 
-LaunchCommand::LaunchCommand(){
+LaunchCommand::LaunchCommand(Rocket* r):Command(r){
 
 }
 
@@ -9,5 +9,5 @@ LaunchCommand::~LaunchCommand(){
 }
 
 void LaunchCommand::execute(){
-    
+    receiver->launch();
 }

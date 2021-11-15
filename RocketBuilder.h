@@ -8,14 +8,15 @@ using namespace std;
 
 class RocketBuilder
 {
-    private:
-        Rocket* builtRocket;
+    
     public:
         RocketBuilder();
         virtual ~RocketBuilder();
-
         virtual void addParts() = 0;
         Rocket* returnRocket();
+
+    protected:
+        Rocket* builtRocket;
 
 };
 
