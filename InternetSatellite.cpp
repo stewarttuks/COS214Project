@@ -4,10 +4,6 @@ InternetSatellite::InternetSatellite(int i): Satellite(i){
 
 }
 
-InternetSatellite::InternetSatellite(int i, Antenna* a): Satellite(i, a){
-
-}
-
 InternetSatellite::~InternetSatellite(){
 
 }
