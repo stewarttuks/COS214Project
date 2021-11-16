@@ -7,8 +7,6 @@ using namespace std;
 
 class Crew
 {
-    private:
-        string name;
 
     public:
         Crew();
@@ -16,11 +14,15 @@ class Crew
         Crew(const Crew&);
         ~Crew();
 
-        Crew* clone(string);
+        Crew* clone();
 
         //getter
         string getname();
-        void setname(string n){name = n;}
+        void setname(string n);
+
+    private:
+        string name;
+        string gender;
 
 };
 
