@@ -10,12 +10,7 @@ class Antenna;
 
 class Satellite
 {
-    private:
-        int id;
-        Antenna* antenna;
-
     public:
-        Satellite(int, Antenna*);
         Satellite(int);
         ~Satellite();
 
@@ -24,6 +19,11 @@ class Satellite
         Antenna* getantenna();
         void setid(int);
         void setantenna(Antenna*);
+
+    private:
+        int id;
+        Antenna* antenna;
+
 
 
 };

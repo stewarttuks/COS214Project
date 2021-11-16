@@ -4,11 +4,6 @@ Satellite::Satellite(int i){
     id = i;
 }
 
-Satellite::Satellite(int i, Antenna* a){
-    id = i;
-    antenna = a;
-}
-
 Satellite::~Satellite(){
     delete antenna;
     id = 0;
