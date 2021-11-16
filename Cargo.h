@@ -7,18 +7,21 @@ using namespace std;
 
 class Cargo
 {
-    private:
-        string description;
-
     public:
-        Cargo(string);
+        Cargo(int);
         Cargo(const Cargo&);
         ~Cargo();
 
-        Cargo* clone(string);
+        Cargo* clone();
 
-        //getter
-        string getdescription();
+        //getter + setters
+        string getDescription();
+        void setDescription(string);
+
+
+    private:
+        string description;
+        int weight;
 
 };
 

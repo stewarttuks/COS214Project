@@ -1,7 +1,7 @@
 #include "Cargo.h"
 
-Cargo::Cargo(string d){
-    description = d;
+Cargo::Cargo(int w){
+    weight = w;
 }
 
 Cargo::Cargo(const Cargo& c){
@@ -12,10 +12,14 @@ Cargo::~Cargo(){
     description = "";
 }
 
-Cargo* Cargo::clone(string d){
-    return new Cargo(d);
+Cargo* Cargo::clone(){
+    return new Cargo(this->weight);
 }
 
-string Cargo::getdescription(){
+string Cargo::getDescription(){
     return description;
+}
+
+void Cargo::setDescription(string d){
+        description = d;
 }
