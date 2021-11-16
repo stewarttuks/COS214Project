@@ -32,5 +32,5 @@ void Dragon::getSummary(){
     cout << "Contents of " << this->getname() << ": " << endl;
 
     for (auto i = cargo.begin(); i != cargo.end(); i++)      
-            cout << "Crew desription: " << (*i)->getdescription() << endl;
+            cout << "Crew desription: " << (*i)->getDescription() << endl;
 }

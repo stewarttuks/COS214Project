@@ -42,5 +42,5 @@ void CrewDragon::getSummary(){
     
     cout << endl;
     for (auto i = cargo.begin(); i != cargo.end(); i++)      
-            cout << "Crew desription: " << (*i)->getdescription() << endl;
+            cout << "Crew desription: " << (*i)->getDescription() << endl;
 }
