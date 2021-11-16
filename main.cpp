@@ -23,17 +23,17 @@ int main(){
     
     // Create Crew for CrewDragon
     vector<Crew*> crewListCrewDragon;
-    crewListCrewDragon.push_back(new Crew("Jason"));
-    crewListCrewDragon.push_back(new Crew("Adam"));
-    crewListCrewDragon.push_back(crewListCrewDragon.at(0)->clone("Todd"));
-    crewListCrewDragon.push_back(crewListCrewDragon.at(1)->clone("Danny"));
+    crewListCrewDragon.push_back(new Crew("Male"));
+    crewListCrewDragon.push_back(new Crew("Female"));
+    crewListCrewDragon.push_back(crewListCrewDragon.at(0)->clone());
+    crewListCrewDragon.push_back(crewListCrewDragon.at(1)->clone());
 
     //Create Cargo for Dragon
     vector<Cargo*> cargoListCrewDragon;
-    cargoListCrewDragon.push_back(new Cargo("Food"));
-    cargoListCrewDragon.push_back(new Cargo("Equipment"));
-    cargoListCrewDragon.push_back(cargoListCrewDragon.at(0)->clone("Clothing"));
-    cargoListCrewDragon.push_back(cargoListCrewDragon.at(1)->clone("Suppies"));
+    cargoListCrewDragon.push_back(new Cargo(5));
+    cargoListCrewDragon.push_back(new Cargo(10));
+    cargoListCrewDragon.push_back(cargoListCrewDragon.at(0)->clone());
+    cargoListCrewDragon.push_back(cargoListCrewDragon.at(1)->clone());
 
     Rocket* CrewDragonRocket = new CrewDragon(crewListCrewDragon.size(), crewListCrewDragon, cargoListCrewDragon.size(), cargoListCrewDragon, CrewDragonname, CrewDragonfuel, CrewDragonstate);
     CrewDragonRocket->getSummary();
@@ -47,9 +47,9 @@ int main(){
 
     //Create Cargo for CrewDragon
     vector<Cargo*> cargoListDragon;
-    cargoListDragon.push_back(new Cargo("Food"));
-    cargoListDragon.push_back(cargoListDragon.at(0)->clone("Clothing"));
-    cargoListDragon.push_back(cargoListDragon.at(1)->clone("Suppies"));
+    cargoListDragon.push_back(new Cargo(6));
+    cargoListDragon.push_back(cargoListDragon.at(0)->clone());
+    cargoListDragon.push_back(cargoListDragon.at(1)->clone());
 
     Rocket* DragonRocket = new Dragon(cargoListDragon.size(), cargoListDragon, Dragonname, Dragonfuel, Dragonstate);
     DragonRocket->getSummary();
