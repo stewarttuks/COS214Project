@@ -12,6 +12,17 @@ Rocket::~Rocket(){
     fuel = 0;
 }
 
+void Rocket::activateLaunch(){
+    cout << "Activating Launch" << endl;
+    cout << "Launch will begin in 3 2 1..." << endl;
+    launch();
+}
+
+void Rocket::prepLaunch(){
+    cout << "Preparing..." << endl;
+    prepLaunch();
+}
+
 string Rocket::getname(){
     return name;
 }
