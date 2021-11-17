@@ -2,6 +2,7 @@
 #define REFURBISHSTATE_H
 
 #include <iostream>
+#include <string>
 #include "RocketState.h"
 
 using namespace std;

@@ -14,8 +14,10 @@ class RocketBackup
     public:
         RocketBackup(string, int);
         virtual ~RocketBackup();
-
-        //I think you may need to add getters and setters
+        string getBackupName() { return name; }
+        int getBackupFuel() { return fuel; }
+        void setBackupFuel(int);
+        void setBackupName(string);
 
 };
 

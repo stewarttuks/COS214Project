@@ -1,7 +1,7 @@
 #include "RocketStorage.h"
 
 RocketStorage::RocketStorage(){
-
+    backup = nullptr;
 }
 
 RocketStorage::~RocketStorage(){
@@ -9,9 +9,9 @@ RocketStorage::~RocketStorage(){
 }
 
 RocketBackup* RocketStorage::restoreRocket(){
-    return backup;                      // I dont know if this is right -> I just needed to return something so that it complies
+    return backup;
 }
 
 void RocketStorage::storeRocket(RocketBackup* rb){
-    
+    this->backup = rb;
 }
