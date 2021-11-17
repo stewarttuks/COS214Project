@@ -10,7 +10,8 @@ using namespace std;
 class SatelliteIterator
 {
     private:
-        
+        vector<Satellite*> itList;
+        int currentPos;
 
     public:
         SatelliteIterator(vector<Satellite*>);
@@ -19,6 +20,7 @@ class SatelliteIterator
         Satellite* first();
         Satellite* last();
         Satellite* next();
+        Satellite* current(); //added 
         bool isDone();
 
 

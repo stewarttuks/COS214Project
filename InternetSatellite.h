@@ -8,13 +8,14 @@ using namespace std;
 
 class InternetSatellite : public Satellite
 {
+    private:
+
     public:
+        InternetSatellite(int, Antenna*);
         InternetSatellite(int);
         ~InternetSatellite();
 
         void test(string);
-
-        private:
 
 };
 

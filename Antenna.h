@@ -17,14 +17,19 @@ class Antenna
         Antenna();
         virtual ~Antenna();
 
-        virtual void attach(Satellite*) = 0;
-        virtual void detach(Satellite*) = 0;
-        virtual void notify() = 0;
+        // virtual void attach(Satellite*) = 0;
+        // virtual void detach(Satellite*) = 0;
+        // virtual void notify() = 0;
+
+        void attach(Satellite*);
+        void detach(Satellite*);
+        void notify();
 
 
         //setters and getters
-        string getSignal();
-        void setSignal(string);
+        
+        // string getSignal();
+        // void setSignal(string);
         vector<Satellite*> getSatelliteList();
         void setSatelliteList(vector<Satellite*>);
 
