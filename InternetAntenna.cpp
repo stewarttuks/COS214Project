@@ -8,14 +8,22 @@ InternetAntenna::~InternetAntenna(){
 
 }
 
-void InternetAntenna::attach(Satellite* s){
+// void InternetAntenna::attach(Satellite* s){
 
+// }
+
+// void InternetAntenna::detach(Satellite* s){
+
+// }
+
+// void InternetAntenna::notify(){
+
+// }
+
+void InternetAntenna::setSignal(string s){
+    signal = s;
 }
 
-void InternetAntenna::detach(Satellite* s){
-
-}
-
-void InternetAntenna::notify(){
-
+string InternetAntenna::getSignal(){
+    return signal;
 }

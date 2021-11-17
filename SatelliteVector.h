@@ -15,7 +15,9 @@ class SatelliteVector
 
     public:
         SatelliteVector();
-        virtual ~SatelliteVector();
+        // virtual ~SatelliteVector();
+        ~SatelliteVector();
+
 
         SatelliteIterator* createIterator();
 

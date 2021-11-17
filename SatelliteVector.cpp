@@ -10,5 +10,5 @@ SatelliteVector::~SatelliteVector(){
 }
 
 SatelliteIterator* SatelliteVector::createIterator(){
-    return new SatelliteIterator(satellites);                   // I don't know if this is right, but I just needed to return something so you can delete it
+    return new SatelliteIterator(satellites);                
 }
