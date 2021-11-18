@@ -3,6 +3,10 @@
 
 #include <iostream>
 #include "Rocket.h"
+#include "FalconHeavy.h"
+#include "FalconNine.h"
+#include "CrewDragon.h"
+#include "Dragon.h"
 
 using namespace std;
 
