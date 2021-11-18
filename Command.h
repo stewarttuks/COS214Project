@@ -14,7 +14,7 @@ class Command
         void setRocket(Rocket*);
         virtual ~Command();
         virtual void execute() = 0;
-        // virtual void stop() = 0;
+        
 
     protected:
         Rocket* receiver;

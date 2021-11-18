@@ -8,12 +8,14 @@ using namespace std;
 
 class ControlPanel : public ControlRoom
 {
-    private:
+    friend class ControlPanelProxy;
 
     public:
         ControlPanel(Button**);
+    private:
+        
         virtual ~ControlPanel();
-
+        void press(int);
 };
 
 #endif

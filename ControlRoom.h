@@ -13,7 +13,7 @@ class ControlRoom
     public:
         ControlRoom();
         virtual ~ControlRoom();
-     
+        virtual void press(int) = 0;
 
     protected:
         Button** buttons;

@@ -14,7 +14,7 @@ class Button
         Button(Command*);
         virtual ~Button();
 
-        void push();
+        void press();
         void operation(Command*);
 
 };

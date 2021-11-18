@@ -7,3 +7,7 @@ ControlPanel::ControlPanel(Button** b){
 ControlPanel::~ControlPanel(){
 
 }
+
+void ControlPanel::press(int b){
+    buttons[b]->press();
+}
