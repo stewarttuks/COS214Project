@@ -1,9 +1,7 @@
 #include "FalconHeavy.h"
 
-FalconHeavy::FalconHeavy(int numSat, vector<Satellite*> Vsatellite, string n, int f, RocketState* s) : Rocket(n, f, s)
+FalconHeavy::FalconHeavy()
 {
-    numSatellites = numSat;
-    satellites = Vsatellite;
 }
 
 FalconHeavy::~FalconHeavy(){

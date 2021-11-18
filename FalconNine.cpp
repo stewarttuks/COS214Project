@@ -1,9 +1,7 @@
 #include "FalconNine.h"
 
-FalconNine::FalconNine(int numSat, vector<Satellite*> Vsatellite, string n, int f, RocketState* s) : Rocket(n, f, s)
+FalconNine::FalconNine()
 {
-    numSatellites = numSat;
-    satellites = Vsatellite;
 
 }
 

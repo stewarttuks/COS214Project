@@ -1,11 +1,8 @@
 #include "CrewDragon.h"
 
-CrewDragon::CrewDragon(int CM, vector<Crew*> VCrew, int CB, vector<Cargo*> VCargo, string n, int f, RocketState* s) : Rocket(n, f, s)
+CrewDragon::CrewDragon()
 {
-    NumCrewMembers = CM;
-    crew = VCrew;
-    NumCargoBoxes = CB;
-    cargo = VCargo;
+  
 }
 
 CrewDragon::~CrewDragon(){
@@ -15,8 +12,8 @@ CrewDragon::~CrewDragon(){
     for (auto i = cargo.begin(); i != cargo.end(); i++)
         delete *i;
 
-    NumCrewMembers = 0;
-    NumCargoBoxes = 0;
+    numCrewMembers = 0;
+    numCargoBoxes = 0;
 }
 
 void CrewDragon::launch(){
@@ -43,4 +40,5 @@ void CrewDragon::getSummary(){
     cout << endl;
     for (auto i = cargo.begin(); i != cargo.end(); i++)      
             cout << "Crew desription: " << (*i)->getDescription() << endl;
+
 }

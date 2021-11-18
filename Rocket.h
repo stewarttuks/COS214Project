@@ -2,8 +2,12 @@
 #define ROCKET_H
 
 #include <iostream>
+#include <vector>
+
 #include "RocketState.h"
 #include "Cargo.h"
+#include "Crew.h"
+#include "Satellite.h"
 
 using namespace std;
 
@@ -12,8 +16,9 @@ class Rocket
 {
     public:
         Rocket();
-        Rocket(string, int, RocketState*);
+        // Rocket(string, int, RocketState*);
         virtual ~Rocket();
+
 
         //Template Methods
         void activateLaunch();
@@ -29,10 +34,30 @@ class Rocket
         int getfuel();
         RocketState* getstate();
 
-    private:
+        //setters
+
+        void setFuel(int);
+        void setName(string);
+        void setState(RocketState*);
+
+        void loadSatellites(vector<Satellite*>);
+        void loadCrew(vector<Crew*>);
+        void loadCargo(vector<Cargo*>);
+
+        
+
+    protected:
         string name;
         int fuel;
         RocketState* state;
+
+        int numCrewMembers;
+        int numCargoBoxes;
+        int numSatellites;
+
+        vector<Crew*> crew;
+        vector<Cargo*> cargo;
+        vector<Satellite*> satellites;
 
 
 };

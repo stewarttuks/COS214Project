@@ -1,9 +1,7 @@
 #include "Rocket.h"
 
-Rocket::Rocket(string n, int f, RocketState* s){
-    name = n;
-    fuel = f;
-    state = s;
+Rocket::Rocket(){
+
 }
 
 Rocket::~Rocket(){
@@ -33,4 +31,31 @@ int Rocket::getfuel(){
 
 RocketState* Rocket::getstate(){
     return state;
+}
+
+void Rocket::setState(RocketState* s){
+    state = s;
+}
+
+void Rocket::setName(string n){
+    name = n;
+}
+
+void Rocket::setFuel(int f){
+    fuel = f;
+}
+
+void Rocket::loadCrew(vector<Crew*> c){
+    crew = c;
+    numCrewMembers = c.size();
+}
+
+void Rocket::loadCargo(vector<Cargo*> c){
+    cargo = c;
+    numCargoBoxes = c.size();
+}
+
+void Rocket::loadSatellites(vector<Satellite*> s){
+    satellites = s;
+    numSatellites = s.size();
 }

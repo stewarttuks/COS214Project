@@ -1,9 +1,7 @@
 #include "Dragon.h"
 
-Dragon::Dragon(int CB, vector<Cargo*> VCargo, string n, int f, RocketState* s) : Rocket(n, f, s)
+Dragon::Dragon()
 {
-    numCargoBoxes = CB;
-    cargo = VCargo;
 
 }
 

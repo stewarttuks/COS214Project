@@ -2,24 +2,17 @@
 #define CREWDRAGON_H
 
 #include <iostream>
-#include <vector>
+
 #include "Rocket.h"
-#include "Crew.h"
-#include "Cargo.h"
+
 
 using namespace std;
 
 class CrewDragon : public Rocket
 {
-    private:
-        int NumCrewMembers;
-        int NumCargoBoxes;
-        vector<Crew*> crew;
-        vector<Cargo*> cargo;
-
 
     public:
-        CrewDragon(int, vector<Crew*>, int, vector<Cargo*>, string, int, RocketState*);
+        CrewDragon();
         ~CrewDragon();
 
         void prepLaunch();
@@ -27,7 +20,6 @@ class CrewDragon : public Rocket
         void launch();
 
         void getSummary();
-
 
 };
 
