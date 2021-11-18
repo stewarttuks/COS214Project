@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include "Command.h"
+#include "Rocket.h"
 
 using namespace std;
 
@@ -15,7 +16,8 @@ class Button
         virtual ~Button();
 
         void press();
-        void operation(Command*);
+        void setOperation(Command*);
+        void setRocket(Rocket*);
 
 };
 

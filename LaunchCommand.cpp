@@ -1,6 +1,6 @@
 #include "LaunchCommand.h"
 
-LaunchCommand::LaunchCommand(Rocket* r):Command(r){
+LaunchCommand::LaunchCommand():Command(){
 
 }
 

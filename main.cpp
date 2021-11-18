@@ -12,83 +12,57 @@
 #include "Dragon.h"
 #include "FalconHeavy.h"
 #include "FalconNine.h"
+#include "ControlPanelProxy.h"
+#include "ControlPanel.h"
+#include "PrepCommand.h"
+#include "LaunchCommand.h"
+#include "InfoCommand.h"
+
 
 using namespace std;
 
-int main(){    
+int main(){ 
 
-    // for (int i = 0; i <3; i++) {
-    //     cout<< i << endl;
-    //     sleep(1);
-    // }
-    // //Testing and Populating Rockets
-    // cout << "__________________Crew Dragon Rocket__________________" << endl;
+    cout<<"===================================================\n          COS214 Project - Runtime Terror\n===================================================\n\n\n";
 
-    // //Rocket properties
-    // string CrewDragonname = "Crew Dragon II";
-    // int CrewDragonfuel = 100000;
-    // RocketState* CrewDragonstate = NULL;
+    // ---------------- Objects setup / variable declaration ---------------- //
+    // controlroom->setReciever(r);
+    Button** buttons = new Button*[3];
+
+    Command* prepCommand = new PrepCommand();
+    Command* launchCommand = new LaunchCommand();
+    Command* infoCommand = new InfoCommand();
+
+    buttons[0] = new Button(prepCommand);               // prep
+    buttons[1] = new Button(launchCommand);             // launch
+    buttons[2] = new Button(infoCommand);               // info
+
+    ControlRoom* protectedPanel = new ControlPanel(buttons);
+
+    ControlRoom* controlPanel = new ControlPanelProxy();
+    controlPanel->protect(protectedPanel);
+
+    bool loggedIn = false;
+    string username;
+    string password;
+
+    // ---------------------------------------------------------------------- //
+
     
-    // // Create Crew for CrewDragon
-    // vector<Crew*> crewListCrewDragon;
-    // crewListCrewDragon.push_back(new Crew("Male"));
-    // crewListCrewDragon.push_back(new Crew("Female"));
-    // crewListCrewDragon.push_back(crewListCrewDragon.at(0)->clone());
-    // crewListCrewDragon.push_back(crewListCrewDragon.at(1)->clone());
 
-    // //Create Cargo for Dragon
-    // vector<Cargo*> cargoListCrewDragon;
-    // cargoListCrewDragon.push_back(new Cargo(5));
-    // cargoListCrewDragon.push_back(new Cargo(10));
-    // cargoListCrewDragon.push_back(cargoListCrewDragon.at(0)->clone());
-    // cargoListCrewDragon.push_back(cargoListCrewDragon.at(1)->clone());
+    cout <<"Welcome to SpaceX's Rocket simulation center...Please Log in to access the control panel.\n>";
 
-    // Rocket* CrewDragonRocket = new CrewDragon(crewListCrewDragon.size(), crewListCrewDragon, cargoListCrewDragon.size(), cargoListCrewDragon, CrewDragonname, CrewDragonfuel, CrewDragonstate);
-    // CrewDragonRocket->getSummary();
+    
 
-    //  cout << endl << "__________________Dragon Rocket__________________" << endl;
+    while (!loggedIn)
+    {
 
-    // //Rocket properties
-    // string Dragonname = "Dragon II";
-    // int Dragonfuel = 500000;
-    // RocketState* Dragonstate = NULL;
+        loggedIn = controlPanel->authorise(username, password);
+    }
 
-    // //Create Cargo for CrewDragon
-    // vector<Cargo*> cargoListDragon;
-    // cargoListDragon.push_back(new Cargo(6));
-    // cargoListDragon.push_back(cargoListDragon.at(0)->clone());
-    // cargoListDragon.push_back(cargoListDragon.at(1)->clone());
-
-    // Rocket* DragonRocket = new Dragon(cargoListDragon.size(), cargoListDragon, Dragonname, Dragonfuel, Dragonstate);
-    // DragonRocket->getSummary();
-
-    // cout << endl << "__________________Falcon Nine Rocket__________________" << endl;
-
-    // //Rocket properties
-    // string FalconNinename = "Falcon Nine II";
-    // int FalconNinefuel = 200000;
-    // RocketState* FalconNinestate = NULL;
-
-    // //Create Satellite for Falcon Nine
-    //  SatelliteFactory* factory = new InternetSatelliteFactory();                                 //createFactory
-    //  vector<Satellite*> FalconNineSatellites = factory->CreateAllSatellites(80);
-
-    // Rocket* FalconNineRocket = new FalconNine(FalconNineSatellites.size(), FalconNineSatellites, FalconNinename, FalconNinefuel, FalconNinestate);
-    // FalconNineRocket->getSummary();
+    // while ()
 
 
-    // cout << endl << "__________________Falcon Heavy Rocket__________________" << endl;
-
-    // //Rocket properties
-    // string FalconHeavyname = "Falcon Heavy II";
-    // int FalconHeavyfuel = 300000;
-    // RocketState* FalconHeavystate = NULL;
-
-    // //Create Satellite for Falcon Nine
-    //  vector<Satellite*> FalconHeavySatellites = factory->CreateAllSatellites(100);
-
-    // Rocket* FalconHeavyRocket = new FalconHeavy(FalconHeavySatellites.size(), FalconHeavySatellites, FalconHeavyname, FalconHeavyfuel, FalconHeavystate);
-    // FalconHeavyRocket->getSummary();
-
+    cout<<endl;
     return 0;
 }

@@ -18,6 +18,8 @@ void DragonBuilder::addParts(){
     sleep(1);
     addDragonEngine();
     sleep(1);
+    addFuel();
+    sleep(1);
 
     cout << "\nConstruction of " << builtRocket->getname() << " complete\n";
 }
@@ -42,4 +44,8 @@ void DragonBuilder::addDragonEngine(){
 
 void DragonBuilder::addCrates(){
     cout << "Storare room ready for cargo\n";
+}
+
+void DragonBuilder::addFuel(){
+    builtRocket->setFuel(2000);
 }

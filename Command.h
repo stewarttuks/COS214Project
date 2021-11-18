@@ -10,7 +10,7 @@ class Command
 {
     
     public:
-        Command(Rocket*);
+        Command();
         void setRocket(Rocket*);
         virtual ~Command();
         virtual void execute() = 0;

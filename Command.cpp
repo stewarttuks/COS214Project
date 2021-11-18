@@ -1,7 +1,7 @@
 #include "Command.h"
 
-Command::Command(Rocket* rocket){
-    receiver = rocket;
+Command::Command(){
+    receiver = nullptr;
 }
 
 void Command::setRocket(Rocket* rocket){

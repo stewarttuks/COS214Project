@@ -9,7 +9,7 @@ using namespace std;
 class PrepCommand : public Command
 {
     public:
-        PrepCommand(Rocket*);
+        PrepCommand();
         virtual ~PrepCommand();
         void execute();
 

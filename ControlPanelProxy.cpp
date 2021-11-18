@@ -8,7 +8,7 @@ ControlPanelProxy::~ControlPanelProxy(){
 
 }
 
-void ControlPanelProxy::protect(ControlPanel* cp){
+void ControlPanelProxy::protect(ControlRoom* cp){
     controlPanel = cp;
 }
 

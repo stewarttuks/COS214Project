@@ -1,6 +1,6 @@
 #include "PrepCommand.h"
 
-PrepCommand::PrepCommand(Rocket* r):Command(r){
+PrepCommand::PrepCommand():Command(){
 
 }
 

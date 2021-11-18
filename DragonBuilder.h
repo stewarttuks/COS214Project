@@ -8,16 +8,18 @@ using namespace std;
 
 class DragonBuilder : public RocketBuilder
 {
-    private:
+   
 
     public:
         DragonBuilder();
         virtual ~DragonBuilder();
-
         void addParts();
+
+    private:
         void addShell();
         void addDragonEngine();
         void addCrates();
+        void addFuel();
 
 };
 

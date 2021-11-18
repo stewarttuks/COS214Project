@@ -16,12 +16,13 @@ class FalconHeavyBuilder : public RocketBuilder
 
         void addParts();
 
-    protected:
+    private:
     
         void addShell();
         void addCores();
         void addMerlinEngine();
         void addVacuumEngine();
+        void addFuel();
 
 };
 

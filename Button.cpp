@@ -13,6 +13,11 @@ void Button::press(){
         command->execute();
 }
 
-void Button::operation(Command* c){
-    
+void Button::setOperation(Command* c){
+    command = c;
+}
+
+void Button::setRocket(Rocket* r){
+    if (command)
+        command->setRocket(r);
 }

@@ -14,12 +14,12 @@ class ControlPanelProxy : public ControlRoom
     public:
         ControlPanelProxy();
         ~ControlPanelProxy();
-        void protect(ControlPanel*);
+        void protect(ControlRoom*);
         bool authorise(string, string);
         void press(int);
     
     private:
-        ControlPanel* controlPanel;
+        ControlRoom* controlPanel;
         bool authorized = false;
         string username = "admin";
         string password = "admin";

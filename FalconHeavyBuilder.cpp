@@ -21,6 +21,8 @@ void FalconHeavyBuilder::addParts(){
     sleep(1);
     addVacuumEngine();
     sleep(1);
+    addFuel();
+    sleep(1);
 
     cout << "\nConstruction of " << builtRocket->getname() << " complete\n";
 }
@@ -53,4 +55,8 @@ void FalconHeavyBuilder::addMerlinEngine(){
 
 void FalconHeavyBuilder::addVacuumEngine(){
     cout << "The Vacuum engine has been added\n";
+}
+
+void FalconHeavyBuilder::addFuel(){
+    builtRocket->setFuel(1200);
 }

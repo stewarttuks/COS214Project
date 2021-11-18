@@ -8,17 +8,21 @@ using namespace std;
 
 class FalconNineBuilder : public RocketBuilder
 {
-    private:
 
     public:
         FalconNineBuilder();
         virtual ~FalconNineBuilder();
-
         void addParts();
+
+    private:
         void addShell();
         void addCores();
         void addMerlinEngine();
         void addVacuumEngine();
+        void addFuel();
+
+  
+
 
 };
 
