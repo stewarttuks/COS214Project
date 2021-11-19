@@ -41,8 +41,8 @@ class Rocket
         void setState(RocketState*);
 
         void loadSatellites(vector<Satellite*>);
-        void loadCrew(vector<Crew*>);
-        void loadCargo(vector<Cargo*>);
+        void loadCrew(Crew*);
+        void loadCargo(Cargo*);
 
         
 

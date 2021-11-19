@@ -45,14 +45,14 @@ void Rocket::setFuel(int f){
     fuel = f;
 }
 
-void Rocket::loadCrew(vector<Crew*> c){
-    crew = c;
-    numCrewMembers = c.size();
+void Rocket::loadCrew(Crew* c){
+    crew.push_back(c);
+    numCrewMembers++;
 }
 
-void Rocket::loadCargo(vector<Cargo*> c){
-    cargo = c;
-    numCargoBoxes = c.size();
+void Rocket::loadCargo(Cargo* c){
+    cargo.push_back(c);
+    numCargoBoxes++;
 }
 
 void Rocket::loadSatellites(vector<Satellite*> s){

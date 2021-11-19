@@ -17,11 +17,9 @@ class Crew
         Crew* clone();
 
         //getter
-        string getname();
-        void setname(string n);
+        string getgender();
 
     private:
-        string name;
         string gender;
 
 };

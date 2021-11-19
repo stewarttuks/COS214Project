@@ -21,7 +21,7 @@ class Cargo
 
     private:
         string description;
-        int weight;
+        int volume;
 
 };
 

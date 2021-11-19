@@ -19,6 +19,7 @@
 #include "LaunchCommand.h"
 #include "InfoCommand.h"
 #include "RocketDirector.h"
+#include "InternetSatelliteFactory.h"
 
 
 using namespace std;
@@ -52,6 +53,17 @@ int main(){
     bool FN = false;            // FalconNine
     string username;
     string password;
+
+    Crew* maleCrewPrototype = new Crew("Male");
+    Crew* femaleCrewPrototype = new Crew("Female");
+
+    Crew** crewPrototypes = new Crew*[2];
+    crewPrototypes[0] = maleCrewPrototype;
+    crewPrototypes[1] = femaleCrewPrototype;
+
+    Cargo* cargoPrototype = new Cargo (500);
+
+    SatelliteFactory* internetSatelliteFactory = new InternetSatelliteFactory();
 
     // ---------------------------------------------------------------------- //
 
@@ -131,28 +143,90 @@ int main(){
                 else{
                     valid = true;
                 }
+            }
 
-                if (valid){
-                    if (numCrew ==0){                       // Dragon
-                        D = true;
-                        director->build(1);
-                        myRocket = director->getRocket();
-                    }
-                    else{
-                        CD = true;
-                        director->build(0);                 // CrewDragon
-                        myRocket = director->getRocket();
-                    }
-                    
+                
+            if (numCrew ==0){                       // Dragon
+                D = true;
+                director->build(1);
+                myRocket = director->getRocket();
+                for (int i=0; i< numCargo; i++){
+                    string description;
+                    Cargo* box = cargoPrototype->clone();
+                    cout << "Enter description of Cargo Crate " << i+1 << "\n> ";
+                    cin >>description;
+                    box->setDescription(description);
+                    myRocket->loadCargo(box);
                 }
-                    
+            }
+            else{
+                CD = true;
+                director->build(0);                 // CrewDragon
+                myRocket = director->getRocket();
+                cout<<endl;
+                for (int i=0; i< numCargo; i++){
+                    string description;
+                    Cargo* box = cargoPrototype->clone();
+                    cout << "Enter description of Cargo Crate " << i+1 << "\n> ";
+                    cin >>description;
+                    box->setDescription(description);
+                    myRocket->loadCargo(box);
+                }
+                for (int i=0; i< numCrew; i++){
+                    int gender = 0;
+                    while (gender <1 || gender > 2){
+                        cout << "What is the gender of Crew Member " << i+1 << "?\n1: Male  \t2:Female\n> ";
+                        cin>>gender;
+                        if (gender <3 || gender >=1)
+                        {
+                            string name;
+                            myRocket->loadCrew(crewPrototypes[gender-1]->clone());
+                        }
+                    }   
+                }
             }
         }
 
         else if (sendOption == 2){              
             chosen = true;
-            director->build(1);
-            myRocket = director->getRocket();
+            bool valid = false;
+            int numSatellites ;
+
+            while (!valid){
+                cout << "How many Satellites do you want to send to space?\n> ";
+                cin >>numSatellites;
+
+                if (numSatellites<=0 )
+                {
+                    cout<<"\n***Please enter a valid number of Satellites***\n\n";
+                    valid = false;
+                }
+                else if (numSatellites > 150 )
+                {
+                    cout<<"\n***We can only send a maximum of 150 Satellites***\n\n";
+                    valid = false;
+                }
+                else{
+                    valid = true;
+                }
+            }
+
+            cout <<endl;
+
+            if (numSatellites <=60){
+                FN = true;
+                director->build(3);
+                myRocket = director->getRocket();
+                
+            }
+            else{
+                FH = true;
+                director->build(2);
+                myRocket = director->getRocket();
+            }
+
+            myRocket->loadSatellites(internetSatelliteFactory->createSatellites(numSatellites));
+
         }
 
         else{
