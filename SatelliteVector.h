@@ -10,16 +10,17 @@ using namespace std;
 
 class SatelliteVector
 {
-    private:
-        vector<Satellite*> satellites;
-
+    
     public:
         SatelliteVector();
         // virtual ~SatelliteVector();
         ~SatelliteVector();
-
-
+        void add(Satellite*);
+        void remove(int);
         SatelliteIterator* createIterator();
+
+    private:
+        vector<Satellite*> satellites;
 
 
 };

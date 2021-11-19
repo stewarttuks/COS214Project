@@ -28,6 +28,7 @@ void FalconHeavyBuilder::addParts(){
 }
 
 void FalconHeavyBuilder::addShell(){
+    srand(time(NULL));
     int unitNumber = rand() % 8999 + 1000;
 
     string name = "Falcon Heavy-" +to_string(unitNumber);

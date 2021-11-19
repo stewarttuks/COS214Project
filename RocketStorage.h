@@ -14,7 +14,7 @@ class RocketStorage
         RocketStorage();
         virtual ~RocketStorage();
 
-        RocketBackup* restoreRocket();
+        void restoreRocket(Rocket*);
         void storeRocket(RocketBackup*);
 
 

@@ -35,6 +35,7 @@ class Rocket
         int getfuel();
         RocketState* getstate();
         string getStateString();
+        vector<Satellite*> getSatelliteList();
         virtual string getType() =0;
 
         //setters

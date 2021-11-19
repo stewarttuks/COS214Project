@@ -3,21 +3,28 @@
 
 #include <iostream>
 
+#include "Rocket.h"
+
 using namespace std;
 
 class RocketBackup
 {
+
+    public:
+        RocketBackup(Rocket*);
+        virtual ~RocketBackup();
+
+        string getBackupName();
+        int getBackupFuel();
+
+
+        void setBackupFuel(int);
+        void setBackupName(string);
+
     private:
         string name;
         int fuel;
 
-    public:
-        RocketBackup(string, int);
-        virtual ~RocketBackup();
-        string getBackupName() { return name; }
-        int getBackupFuel() { return fuel; }
-        void setBackupFuel(int);
-        void setBackupName(string);
 
 };
 

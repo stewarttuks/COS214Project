@@ -27,7 +27,8 @@ void FalconNineBuilder::addParts(){
 }
 
 void FalconNineBuilder::addShell(){
-     int unitNumber = rand() % 8999 + 1000;
+    srand(time(NULL));
+    int unitNumber = rand() % 8999 + 1000;
 
     string name = "Falcon Nine-"+ to_string(unitNumber);
 

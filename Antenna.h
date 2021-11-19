@@ -4,34 +4,27 @@
 #include <iostream>
 #include <vector>
 #include "Satellite.h"
+#include "SatelliteVector.h"
 
 class Satellite;
 using namespace std;
 
 class Antenna
 {
-    private:
-        vector<Satellite*> satelliteList;
-        string signal;
     public:
         Antenna();
         virtual ~Antenna();
 
-        // virtual void attach(Satellite*) = 0;
-        // virtual void detach(Satellite*) = 0;
-        // virtual void notify() = 0;
+        virtual void attach(Satellite*) = 0;
+        virtual void attachAll(vector<Satellite*>) =0;
+        virtual void notify(string) = 0;
 
-        void attach(Satellite*);
-        void detach(Satellite*);
-        void notify();
+        SatelliteVector* getSatelliteList();
+        void setSatelliteList(SatelliteVector*);
 
-
-        //setters and getters
-        
-        // string getSignal();
-        // void setSignal(string);
-        vector<Satellite*> getSatelliteList();
-        void setSatelliteList(vector<Satellite*>);
+     protected:
+        SatelliteVector* satelliteList;
+        string signal;
 
 };
 

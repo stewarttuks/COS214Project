@@ -2,11 +2,11 @@
 #define SATELLITE_H
 
 #include <iostream>
-#include "Antenna.h"
+// #include "Antenna.h"
 
 using namespace std;
 
-class Antenna;
+// class Antenna;
 
 class Satellite
 {
@@ -16,13 +16,14 @@ class Satellite
 
         //getters and setters
         int getid();
-        Antenna* getantenna();
+        // Antenna* getantenna();
         void setid(int);
-        void setantenna(Antenna*);
+        // void setantenna(Antenna*);
+        void receiveMessage(string);
 
     private:
         int id;
-        Antenna* antenna;
+        // Antenna* antenna;
 
 
 

@@ -1,8 +1,8 @@
 #include "RocketBackup.h"
 
-RocketBackup::RocketBackup(string n, int f){
-    this->name = n;
-    this->fuel = f;
+RocketBackup::RocketBackup(Rocket* rocket){
+    setBackupFuel(rocket->getfuel());
+    setBackupName(rocket->getname());
 }
 
 RocketBackup::~RocketBackup(){
@@ -16,3 +16,12 @@ void RocketBackup::setBackupFuel(int f){
 void RocketBackup::setBackupName(string n){
     this->name = n;
 }
+
+int RocketBackup::getBackupFuel(){
+    return this->fuel;
+}
+
+string RocketBackup::getBackupName(){
+    return this->name;
+}
+

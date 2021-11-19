@@ -1,5 +1,6 @@
 #include "CrewDragonBuilder.h"
 #include <unistd.h>
+#include <time.h>
 
 CrewDragonBuilder::CrewDragonBuilder(){
 
@@ -27,6 +28,7 @@ void CrewDragonBuilder::addParts(){
 }
 
 void CrewDragonBuilder::addShell(){
+    srand(time(NULL));
     int unitNumber = rand() % 8999 + 1000;
 
     string name = "Crew Dragon-" + to_string(unitNumber);

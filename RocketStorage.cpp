@@ -8,8 +8,9 @@ RocketStorage::~RocketStorage(){
     delete backup;
 }
 
-RocketBackup* RocketStorage::restoreRocket(){
-    return backup;
+void RocketStorage::restoreRocket(Rocket* rocket){
+    rocket->setName(backup->getBackupName());
+    rocket->setFuel(backup->getBackupFuel());
 }
 
 void RocketStorage::storeRocket(RocketBackup* rb){

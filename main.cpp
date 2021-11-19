@@ -22,6 +22,8 @@
 #include "InternetSatelliteFactory.h"
 #include "PrepState.h"
 #include "LaunchState.h"
+#include "InternetAntenna.h"
+#include "RocketStorage.h"
 
 
 using namespace std;
@@ -49,7 +51,7 @@ int main(){
 
     bool loggedIn = false;
     bool chosen = false;
-    bool doneSimulation;
+    bool doneSimulation = false;
     bool CD = false;            // CrewDragon
     bool D = false;             // Dragon
     bool FH = false;            // FalconHeavy
@@ -68,6 +70,8 @@ int main(){
 
     SatelliteFactory* internetSatelliteFactory = new InternetSatelliteFactory();
 
+    RocketStorage* storage = new RocketStorage();
+
     // ---------------------------------------------------------------------- //
 
     
@@ -76,7 +80,7 @@ int main(){
 
     
     cout<<"===================================================\n";
-    loggedIn = controlPanel->authorise("admin", "admin");
+    
     while (!loggedIn)
     {
         
@@ -100,7 +104,8 @@ int main(){
 
     while (doneSimulation == false)
     {
-       while (!chosen)
+        
+        while (!chosen)
         {
             int sendOption = -1;
             cout<<"What would you like to send to space?\n 1: Crew/Cargo\t2: Satellites\n> ";
@@ -246,6 +251,7 @@ int main(){
         bool done = false;
         bool testing = false;
         int choice;
+        storage->storeRocket(new RocketBackup(myRocket));
         myRocket->setState(new PrepState());
 
         cout<<"\n===================================================\n\n";
@@ -266,7 +272,7 @@ int main(){
                 cout <<"*********************************************************************\n\n";
                 controlPanel->press(choice-1);
                 
-                if (myRocket->getStateString() == "Testing" && choice == 2){
+                if (myRocket->getStateString() == "Ready for launch" && choice == 2){
                     done = true;
                 }
             }
@@ -280,26 +286,63 @@ int main(){
             }
         }
 
-        if (FH == true || FH == true){
+        if (FH == true || FN == true){
+            string message;
+            Antenna* antenna = new InternetAntenna();
+            antenna->attachAll(myRocket->getSatelliteList());
+            cout<<"\nAll Satellites are in orbit and can now begin to communicate";
+            while (message != "q"){
+                cout<<"\nEnter a message to send to all satellites (Enter 'q' to exit communication)\n> ";
+                cin>>message;
+                cout<<endl;
+                antenna->notify(message);
+            }
             
         }
-        
-        int restart;
+
+        int redo;
         cout<<"\nCongratulations on a successful launch!\n";
-        cout<<"Would you like to run a new launch simulation?\n1: Yes\t2:No\n> ";
-        cin >> restart;
-        if (restart == 1){
+        cout<<"Would you like to run the simulation again on the same rocket?\n1: Yes\t\t2:No\n> ";
+        cin >> redo;
+        if (redo == 1){
             doneSimulation = false;
+            storage->restoreRocket(myRocket);
         }
         else{
             doneSimulation = true;
+        }
+        
+        if (redo != 1)
+        {
+
+            D = false;
+            CD = false;
+            FH = false;
+            FN = false;
+
+            int restart;
+            
+            cout<<"\nWould you like to run a new launch simulation?\n1: Yes\t\t2:No\n> ";
+            cin >> restart;
+            cout<<endl;
+            if (restart == 1){
+                doneSimulation = false;
+                chosen = false;
+            }
+            else{
+                doneSimulation = true;
+            }
         }
 
         
     }
     
-    
+    cout<<"===================================================\n              Session Ended\n===================================================\n";
+    cout<<"Thank you for using our SpaceX launch simulation\n\n";
 
-    cout<<endl;
+    cout<<"===================================================\n          COS214 Project - Runtime Terror\n===================================================\n\n";
+
+
+   
     return 0;
 }

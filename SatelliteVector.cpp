@@ -5,10 +5,13 @@ SatelliteVector::SatelliteVector(){
 }
 
 SatelliteVector::~SatelliteVector(){
-    for (auto i = satellites.begin(); i != satellites.end(); i++)
-        delete *i;
+    
 }
 
 SatelliteIterator* SatelliteVector::createIterator(){
     return new SatelliteIterator(satellites);                
+}
+
+void SatelliteVector::add(Satellite* s){
+    satellites.push_back(s);
 }

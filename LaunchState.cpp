@@ -109,6 +109,7 @@ void LaunchState::handleRequest(Rocket* rocket, string request){
             cout<<"Launch Successful!\n";
             sleep(1);
         }
+        rocket->setFuel(0);
         return;
     }
     if (request == "prep"){

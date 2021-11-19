@@ -62,3 +62,7 @@ void Rocket::loadSatellites(vector<Satellite*> s){
 string Rocket::getStateString(){
     return state->getString();
 }
+
+vector<Satellite*> Rocket::getSatelliteList(){
+    return satellites;
+}

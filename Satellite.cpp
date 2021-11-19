@@ -5,7 +5,6 @@ Satellite::Satellite(int i){
 }
 
 Satellite::~Satellite(){
-    delete antenna;
     id = 0;
 }
 
@@ -17,10 +16,14 @@ void Satellite::setid(int i){
     id = i;
 }
 
-Antenna* Satellite::getantenna(){
-    return antenna;
-}
+// Antenna* Satellite::getantenna(){
+//     return antenna;
+// }
 
-void Satellite::setantenna(Antenna* a){
-    antenna = a;
+// void Satellite::setantenna(Antenna* a){
+//     antenna = a;
+// }
+
+void Satellite::receiveMessage(string message){
+    cout << "Satellite " << id << " has received message from SpaceX Station: " << message << endl;
 }

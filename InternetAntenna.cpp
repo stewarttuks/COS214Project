@@ -1,29 +1,31 @@
 #include "InternetAntenna.h"
 
 InternetAntenna::InternetAntenna(){
-
+    satelliteList = new SatelliteVector();
 }
 
 InternetAntenna::~InternetAntenna(){
 
 }
 
-// void InternetAntenna::attach(Satellite* s){
-
-// }
-
-// void InternetAntenna::detach(Satellite* s){
-
-// }
-
-// void InternetAntenna::notify(){
-
-// }
-
-void InternetAntenna::setSignal(string s){
-    signal = s;
+// Observer pattern implementation
+void InternetAntenna::attach(Satellite* satellite){
+    // add to the back of the satellite vector list
+    satelliteList->add(satellite);
 }
 
-string InternetAntenna::getSignal(){
-    return signal;
+void InternetAntenna::notify(string message){
+    SatelliteIterator* it = satelliteList->createIterator();
+
+    while (it->hasNext() == true){
+        it->current()->receiveMessage(message);
+        it->next();
+    }
+}
+
+void InternetAntenna::attachAll(vector<Satellite*> v){
+    vector<Satellite*>::iterator it;
+    for(it = v.begin(); it < v.end(); it++){
+        attach(*it);
+}
 }

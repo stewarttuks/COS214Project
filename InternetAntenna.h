@@ -5,25 +5,20 @@
 
 #include <iostream>
 #include "Antenna.h"
+#include <vector>
 
 using namespace std;
 
 class InternetAntenna : public Antenna
 {
-    private:
-        string signal;
-
-
+   
     public:
         InternetAntenna();
         virtual ~InternetAntenna();
 
-        // void attach(Satellite*);
-        // void detach(Satellite*);
-        // void notify();
-
-        string getSignal();
-        void setSignal(string);
+        void attach(Satellite*);
+        void attachAll(vector<Satellite*>);
+        void notify(string);
 
 };
 

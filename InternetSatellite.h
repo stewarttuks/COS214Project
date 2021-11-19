@@ -11,7 +11,6 @@ class InternetSatellite : public Satellite
     private:
 
     public:
-        InternetSatellite(int, Antenna*);
         InternetSatellite(int);
         ~InternetSatellite();
 

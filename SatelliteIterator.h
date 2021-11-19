@@ -9,21 +9,19 @@ using namespace std;
 
 class SatelliteIterator
 {
-    private:
-        vector<Satellite*> itList;
-        int currentPos;
-
+    
     public:
         SatelliteIterator(vector<Satellite*>);
         ~SatelliteIterator();
 
         Satellite* first();
-        Satellite* last();
         Satellite* next();
-        Satellite* current(); //added 
-        bool isDone();
+        Satellite* current(); 
+        bool hasNext();
 
-
+    private:
+        vector<Satellite*> itList;
+        int currentPos;
 
 
 };

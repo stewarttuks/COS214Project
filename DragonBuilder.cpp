@@ -26,6 +26,7 @@ void DragonBuilder::addParts(){
 }
 
 void DragonBuilder::addShell(){
+    srand(time(NULL));
     int unitNumber = rand() % 8999 + 1000;
 
     string name = "Dragon-" + to_string(unitNumber);
