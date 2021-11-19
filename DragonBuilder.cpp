@@ -1,6 +1,7 @@
 #include "DragonBuilder.h"
 #include <unistd.h>
 
+
 DragonBuilder::DragonBuilder(){
 
 }
@@ -27,11 +28,11 @@ void DragonBuilder::addParts(){
 void DragonBuilder::addShell(){
     int unitNumber = rand() % 8999 + 1000;
 
-    string name = "Crew Dragon - " + unitNumber;
+    string name = "Dragon-" + to_string(unitNumber);
 
     cout << name << "..." << endl;
 
-    builtRocket = new FalconHeavy();
+    builtRocket = new Dragon();
     builtRocket->setName(name);
 
     sleep(1);

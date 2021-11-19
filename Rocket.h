@@ -51,9 +51,9 @@ class Rocket
         int fuel;
         RocketState* state;
 
-        int numCrewMembers;
-        int numCargoBoxes;
-        int numSatellites;
+        int numCrewMembers =0;
+        int numCargoBoxes =0;
+        int numSatellites =0;
 
         vector<Crew*> crew;
         vector<Cargo*> cargo;

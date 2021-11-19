@@ -29,11 +29,11 @@ void FalconNineBuilder::addParts(){
 void FalconNineBuilder::addShell(){
      int unitNumber = rand() % 8999 + 1000;
 
-    string name = "Falcon Nine - " + unitNumber;
+    string name = "Falcon Nine-"+ to_string(unitNumber);
 
     cout << name << "..." << endl;
 
-    builtRocket = new FalconHeavy();
+    builtRocket = new FalconNine();
     builtRocket->setName(name);
 
     sleep(1);

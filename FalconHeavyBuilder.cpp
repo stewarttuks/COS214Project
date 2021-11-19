@@ -30,7 +30,7 @@ void FalconHeavyBuilder::addParts(){
 void FalconHeavyBuilder::addShell(){
     int unitNumber = rand() % 8999 + 1000;
 
-    string name = "Falcon Heavy - " + unitNumber;
+    string name = "Falcon Heavy-" +to_string(unitNumber);
 
     cout << name << "..." << endl;
 

@@ -29,11 +29,11 @@ void CrewDragonBuilder::addParts(){
 void CrewDragonBuilder::addShell(){
     int unitNumber = rand() % 8999 + 1000;
 
-    string name = "Crew Dragon - " + unitNumber;
+    string name = "Crew Dragon-" + to_string(unitNumber);
 
     cout << name << "..." << endl;
 
-    builtRocket = new FalconHeavy();
+    builtRocket = new CrewDragon();
     builtRocket->setName(name);
 
     sleep(1);
