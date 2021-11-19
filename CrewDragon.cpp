@@ -42,3 +42,7 @@ void CrewDragon::getSummary(){
             cout << "Cargo crate "<< ++c << ": " << (*i)->getDescription() << endl;
 
 }
+
+string CrewDragon::getType(){
+    return "CD";
+}

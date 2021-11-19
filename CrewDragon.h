@@ -17,6 +17,7 @@ class CrewDragon : public Rocket
 
         void prepLaunch();
         void launch();
+        string getType();
 
         void getSummary();
 

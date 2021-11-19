@@ -28,3 +28,7 @@ void Dragon::getSummary(){
     for (auto i = cargo.begin(); i != cargo.end(); i++)      
             cout << "Crew desription: " << (*i)->getDescription() << endl;
 }
+
+string Dragon::getType(){
+    return "D";
+}

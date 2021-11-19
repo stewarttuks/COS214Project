@@ -33,3 +33,7 @@ void FalconNine::getSummary(){
     }
     cout << num << " Satellites onboard" << endl;
 }
+
+string FalconNine::getType(){
+    return "FN";
+}

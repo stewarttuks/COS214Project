@@ -16,6 +16,7 @@ class FalconNine : public Rocket
 
         void prepLaunch();
         void launch();
+        string getType();
 };
 
 #endif

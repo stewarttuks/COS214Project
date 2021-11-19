@@ -32,3 +32,7 @@ void FalconHeavy::getSummary(){
     }
     cout << num << " Satellites onboard" << endl;
 }
+
+string FalconHeavy::getType(){
+    return "FH";
+}

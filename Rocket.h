@@ -28,12 +28,14 @@ class Rocket
         virtual void launch() = 0;
         virtual void prepLaunch() = 0;
         virtual void getSummary() = 0;
+        
 
         //getters
         string getname();
         int getfuel();
         RocketState* getstate();
         string getStateString();
+        virtual string getType() =0;
 
         //setters
 

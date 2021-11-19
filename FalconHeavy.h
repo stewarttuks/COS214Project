@@ -16,6 +16,7 @@ class FalconHeavy : public Rocket
         void launch();
 
         void getSummary();
+        string getType();
 };
 
 #endif
