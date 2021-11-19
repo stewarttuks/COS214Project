@@ -33,6 +33,7 @@ class Rocket
         string getname();
         int getfuel();
         RocketState* getstate();
+        string getStateString();
 
         //setters
 

@@ -4,6 +4,8 @@
 #include <iostream>
 #include "Rocket.h"
 
+#include <unistd.h>
+
 using namespace std;
 class Rocket;
 
@@ -16,6 +18,7 @@ class RocketState
        virtual ~RocketState();
 
        virtual void handleRequest(Rocket*, string) = 0;
+       virtual string getString() =0;
 
 };
 

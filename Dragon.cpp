@@ -16,11 +16,7 @@ void Dragon::launch(){
 }
 
 void Dragon::prepLaunch(){
-    this->getstate()->handleRequest(this, "prepLaunch");
-}
-
-void Dragon::testLaunch(){
-    this->getstate()->handleRequest(this, "testLaunch");
+    this->getstate()->handleRequest(this, "prep");
 }
 
 void Dragon::getSummary(){

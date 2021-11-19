@@ -20,6 +20,8 @@
 #include "InfoCommand.h"
 #include "RocketDirector.h"
 #include "InternetSatelliteFactory.h"
+#include "PrepState.h"
+#include "LaunchState.h"
 
 
 using namespace std;
@@ -73,6 +75,7 @@ int main(){
 
     
     cout<<"===================================================\n";
+    loggedIn = controlPanel->authorise("admin", "admin");
     while (!loggedIn)
     {
         
@@ -108,7 +111,6 @@ int main(){
             chosen = true;
             bool valid = false;
 
-            // while ( || numCargo <0 || numCrew >10 || numCargo >20){
             while (!valid){
                 
                 cout<< "Haw many crew members are you sending?\n>";
@@ -157,17 +159,18 @@ int main(){
                     cin >>description;
                     box->setDescription(description);
                     myRocket->loadCargo(box);
+                    cout<< endl;
                 }
             }
             else{
                 CD = true;
                 director->build(0);                 // CrewDragon
                 myRocket = director->getRocket();
-                cout<<endl;
+                
                 for (int i=0; i< numCargo; i++){
                     string description;
                     Cargo* box = cargoPrototype->clone();
-                    cout << "Enter description of Cargo Crate " << i+1 << "\n> ";
+                    cout << "\nEnter description of Cargo Crate " << i+1 << "\n> ";
                     cin >>description;
                     box->setDescription(description);
                     myRocket->loadCargo(box);
@@ -175,7 +178,7 @@ int main(){
                 for (int i=0; i< numCrew; i++){
                     int gender = 0;
                     while (gender <1 || gender > 2){
-                        cout << "What is the gender of Crew Member " << i+1 << "?\n1: Male  \t2:Female\n> ";
+                        cout << "\nWhat is the gender of Crew Member " << i+1 << "?\n1: Male  \t2:Female\n> ";
                         cin>>gender;
                         if (gender <3 || gender >=1)
                         {
@@ -234,8 +237,44 @@ int main(){
         }
     }
 
+    //////////// myRocket has been created ////////////
+
+    protectedPanel->setReceiver(myRocket);
+    bool done = false;
+    bool testing = false;
+    int choice;
+    myRocket->setState(new PrepState());
+
+    cout<<"\n===================================================\n\n";
+    cout<<"Your Rocket is now on the lauch pad. Here is your Control Panel:\n";
     
-    myRocket->getSummary();
+    while (!done){
+            cout <<"\n*********************************************************************\n";
+            cout <<"Rocket Name: "<< myRocket->getname() <<"\n";
+            cout <<"Rocket State: "<< myRocket->getStateString() <<"\n";
+            cout << "1: Prepare Rocket\t2:Launch Rocket\t\t3:Get Rocket Info";
+            if (myRocket->getStateString() == "Testing")
+                cout<<"\t4:Exit Testing";
+            cout<<"\n> ";
+            cin >> choice;
+        
+        if (choice >0 && choice < 4){
+            cout <<"*********************************************************************\n\n";
+            controlPanel->press(choice-1);
+            
+            if (choice == 1)
+                testing = true;
+        }
+        else if (choice == 4 && myRocket->getStateString() == "Testing"){
+            
+            myRocket->setState(new LaunchState());
+        }
+        else{
+            cout<<"***Please press a valid button.***\n";
+        }
+    }
+    
+    
 
     cout<<endl;
     return 0;

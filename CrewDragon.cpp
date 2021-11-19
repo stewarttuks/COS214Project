@@ -21,11 +21,7 @@ void CrewDragon::launch(){
 }
 
 void CrewDragon::prepLaunch(){
-    this->getstate()->handleRequest(this, "prepLaunch");
-}
-
-void CrewDragon::testLaunch(){
-    this->getstate()->handleRequest(this, "testLaunch");
+    this->getstate()->handleRequest(this, "prep");
 }
 
 void CrewDragon::getSummary(){
@@ -43,6 +39,6 @@ void CrewDragon::getSummary(){
     int c =0;
     cout << endl;
     for (auto i = cargo.begin(); i != cargo.end(); i++)      
-            cout << "Cargo crate "<< c++ << ": " << (*i)->getDescription() << endl;
+            cout << "Cargo crate "<< ++c << ": " << (*i)->getDescription() << endl;
 
 }

@@ -9,5 +9,5 @@ PrepCommand::~PrepCommand(){
 }
 
 void PrepCommand::execute(){
-    receiver->prepLaunch();
+    receiver->activatePrepLaunch();
 }

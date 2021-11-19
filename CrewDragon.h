@@ -16,7 +16,6 @@ class CrewDragon : public Rocket
         ~CrewDragon();
 
         void prepLaunch();
-        void testLaunch();
         void launch();
 
         void getSummary();

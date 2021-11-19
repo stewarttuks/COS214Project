@@ -17,11 +17,7 @@ void FalconNine::launch(){
 }
 
 void FalconNine::prepLaunch(){
-    this->getstate()->handleRequest(this, "prepLaunch");
-}
-
-void FalconNine::testLaunch(){
-    this->getstate()->handleRequest(this, "testLaunch");
+    this->getstate()->handleRequest(this, "prep");
 }
 
 void FalconNine::getSummary(){

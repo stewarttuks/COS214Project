@@ -11,13 +11,12 @@ Rocket::~Rocket(){
 }
 
 void Rocket::activateLaunch(){
-    cout << "Activating Launch" << endl;
-    cout << "Launch will begin in 3 2 1..." << endl;
+    cout << "Launch command issued..." << endl;
     launch();
 }
 
-void Rocket::prepLaunch(){
-    cout << "Preparing..." << endl;
+void Rocket::activatePrepLaunch(){
+    cout << "Prepare the Rocket!" << endl;
     prepLaunch();
 }
 
@@ -58,4 +57,8 @@ void Rocket::loadCargo(Cargo* c){
 void Rocket::loadSatellites(vector<Satellite*> s){
     satellites = s;
     numSatellites = s.size();
+}
+
+string Rocket::getStateString(){
+    return state->getString();
 }

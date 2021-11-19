@@ -16,7 +16,6 @@ class Dragon : public Rocket
         void getSummary();
 
         void prepLaunch();
-        void testLaunch();
         void launch();
 };
 

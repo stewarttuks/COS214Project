@@ -13,7 +13,6 @@ class FalconHeavy : public Rocket
         ~FalconHeavy();
 
         void prepLaunch();
-        void testLaunch();
         void launch();
 
         void getSummary();

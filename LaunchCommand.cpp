@@ -9,5 +9,5 @@ LaunchCommand::~LaunchCommand(){
 }
 
 void LaunchCommand::execute(){
-    receiver->launch();
+    receiver->activateLaunch();
 }

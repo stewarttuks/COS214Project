@@ -16,11 +16,7 @@ void FalconHeavy::launch(){
 }
 
 void FalconHeavy::prepLaunch(){
-    this->getstate()->handleRequest(this, "prepLaunch");
-}
-
-void FalconHeavy::testLaunch(){
-    this->getstate()->handleRequest(this, "testLaunch");
+    this->getstate()->handleRequest(this, "prep");
 }
 
 void FalconHeavy::getSummary(){

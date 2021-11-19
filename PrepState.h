@@ -1,5 +1,5 @@
-#ifndef REFURBISHSTATE_H
-#define REFURBISHSTATE_H
+#ifndef PrepState_H
+#define PrepState_H
 
 #include <iostream>
 #include <string>
@@ -7,15 +7,16 @@
 
 using namespace std;
 
-class RefurbishState : public RocketState
+class PrepState : public RocketState
 {
     private:
 
     public:
-        RefurbishState();
-        virtual ~RefurbishState();
+        PrepState();
+        virtual ~PrepState();
 
         void handleRequest(Rocket*, string);
+        string getString();
 
 };
 

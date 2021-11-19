@@ -14,6 +14,7 @@ class TestingState : public RocketState
     public:
         TestingState();
         virtual ~TestingState();
+        string getString();
 
         void handleRequest(Rocket*, string);
 

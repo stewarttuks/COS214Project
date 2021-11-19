@@ -13,6 +13,7 @@ class LaunchState : public RocketState{
     public:
         LaunchState();
         virtual ~LaunchState();
+        string getString();
 
         void handleRequest(Rocket*, string);
 
