@@ -1,3 +1,10 @@
+/**
+ * @file TestingState.h
+ * @author Runtime Terror
+ * @brief The state where a rocket only performs test launches.
+ * @version 0.1
+ * @date 2021-11-22
+ */
 #ifndef TESTINGSTATE_H
 #define TESTINGSTATE_H
 
@@ -9,8 +16,6 @@ using namespace std;
 
 class TestingState : public RocketState
 {
-    private:
-
     public:
         TestingState();
         virtual ~TestingState();

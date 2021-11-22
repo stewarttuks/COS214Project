@@ -1,3 +1,10 @@
+/**
+ * @file Button.h
+ * @author Runtime Terror
+ * @brief A button on the control panel that sends a command to a rocket.
+ * @version 0.1
+ * @date 2021-11-22
+ */
 #ifndef BUTTON_H
 #define BUTTON_H
 
@@ -9,8 +16,6 @@ using namespace std;
 
 class Button
 {
-    private:
-        Command* command;
     public:
         Button(Command*);
         virtual ~Button();
@@ -18,6 +23,9 @@ class Button
         void press();
         void setOperation(Command*);
         void setRocket(Rocket*);
+        
+    private:
+        Command* command;
 
 };
 

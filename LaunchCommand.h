@@ -1,3 +1,10 @@
+/**
+ * @file LaunchCommand.h
+ * @author Runtime Terror
+ * @brief Tells the rocket to launch.
+ * @version 0.1
+ * @date 2021-11-22
+ */
 #ifndef LAUNCHCOMMAND_H
 #define LAUNCHCOMMAND_H
 

@@ -1,3 +1,10 @@
+/**
+ * @file PrepCommand.h
+ * @author Runtime Terror
+ * @brief Tells the rocket to prepare for launch.
+ * @version 0.1
+ * @date 2021-11-22
+ */
 #ifndef PREPCOMMAND_H
 #define PREPCOMMAND_H
 
@@ -12,7 +19,6 @@ class PrepCommand : public Command
         PrepCommand();
         virtual ~PrepCommand();
         void execute();
-
 };
 
 #endif

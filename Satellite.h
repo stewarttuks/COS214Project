@@ -1,3 +1,10 @@
+/**
+ * @file Satellite.h
+ * @author Runtime Terror
+ * @brief Interface for satellite objects.
+ * @version 0.1
+ * @date 2021-11-22
+ */
 #ifndef SATELLITE_H
 #define SATELLITE_H
 

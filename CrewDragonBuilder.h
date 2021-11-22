@@ -1,3 +1,10 @@
+/**
+ * @file CrewDragonBuilder.h
+ * @author Runtime Terror
+ * @brief Builds and stores a CrewDragon rocket.
+ * @version 0.1
+ * @date 2021-11-22
+ */
 #ifndef CREWDRAGONBUILDER_H
 #define CREWDRAGONBUILDER_H
 
@@ -8,8 +15,6 @@ using namespace std;
 
 class CrewDragonBuilder : public RocketBuilder
 {
-    
-
     public:
         CrewDragonBuilder();
         virtual ~CrewDragonBuilder();

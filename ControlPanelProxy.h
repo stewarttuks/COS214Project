@@ -1,3 +1,10 @@
+/**
+ * @file ControlPanelProxy.h
+ * @author Runtime Terror
+ * @brief Limits access to the control panel to authorized users;
+ * @version 0.1
+ * @date 2021-11-22
+ */
 #ifndef CONTROLPANELPROXY_H
 #define CONTROLPANELPROXY_H
 

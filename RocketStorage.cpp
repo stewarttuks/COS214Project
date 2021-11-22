@@ -1,3 +1,10 @@
+/**
+ * @file RocketStorage.cpp
+ * @author Runtime Terror
+ * @brief Implementation of RocketStorage.h
+ * @version 0.1
+ * @date 2021-11-22
+ */
 #include "RocketStorage.h"
 
 RocketStorage::RocketStorage(){

@@ -1,3 +1,10 @@
+/**
+ * @file InternetSatelliteFactory.h
+ * @author Runtime Terror
+ * @brief Creates and returns a vector of InternetSatellite.
+ * @version 0.1
+ * @date 2021-11-22
+ */
 #ifndef INTERNETSATELLITEFACTORY_H
 #define INTERNETSATELLITEFACTORY_H
 

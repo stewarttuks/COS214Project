@@ -1,3 +1,10 @@
+/**
+ * @file RocketDirector.h
+ * @author Runtime Terror
+ * @brief Holds and directs rocket builders.
+ * @version 0.1
+ * @date 2021-11-22
+ */
 #ifndef ROCKETDIRECTOR_H
 #define ROCKETDIRECTOR_H
 

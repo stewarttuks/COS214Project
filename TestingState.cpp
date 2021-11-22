@@ -1,3 +1,10 @@
+/**
+ * @file TestingState.cpp
+ * @author Runtime Terror
+ * @brief Implementation of TestingState.h
+ * @version 0.1
+ * @date 2021-11-22
+ */
 #include "TestingState.h"
 #include "CrewDragon.h"
 #include "Dragon.h"

@@ -1,3 +1,12 @@
+/**
+ * @file Antenna.h
+ * @author Runtime Terror
+ * @brief Used to communicate with satellites in orbit.
+ * @version 0.1
+ * @date 2021-11-22
+ * 
+ * 
+ */
 #ifndef ANTENNA_H
 #define ANTENNA_H
 

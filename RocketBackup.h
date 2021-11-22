@@ -1,3 +1,10 @@
+/**
+ * @file RocketBackup.h
+ * @author Runtime Terror
+ * @brief Stores the details of a rocket to be stored.
+ * @version 0.1
+ * @date 2021-11-22
+ */
 #ifndef ROCKETBACKUP_H
 #define ROCKETBACKUP_H
 

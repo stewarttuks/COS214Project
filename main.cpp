@@ -83,7 +83,6 @@ int main(){
     
     while (!loggedIn)
     {
-        
         cout<<"Username:\n> ";
         cin>> username;
         cout<<"Password:\n> ";

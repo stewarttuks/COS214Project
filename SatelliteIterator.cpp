@@ -1,3 +1,10 @@
+/**
+ * @file SatelliteIterator.cpp
+ * @author Runtime Terror
+ * @brief Implementation of SatelliteIterator.h
+ * @version 0.1
+ * @date 2021-11-22
+ */
 #include "SatelliteIterator.h"
 
 SatelliteIterator::SatelliteIterator(vector<Satellite*> s){

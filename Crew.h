@@ -1,3 +1,10 @@
+/**
+ * @file Crew.h
+ * @author Runtime Terror
+ * @brief A crew member.
+ * @version 0.1
+ * @date 2021-11-22
+ */
 #ifndef CREW_H
 #define CREW_H
 

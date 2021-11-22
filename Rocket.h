@@ -1,3 +1,10 @@
+/**
+ * @file Rocket.h
+ * @author Runtime Terror
+ * @brief Defines the structure of the different rockets.
+ * @version 0.1
+ * @date 2021-11-22
+ */
 #ifndef ROCKET_H
 #define ROCKET_H
 

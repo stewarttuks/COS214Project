@@ -1,3 +1,10 @@
+/**
+ * @file SatelliteIterator.h
+ * @author Runtime Terror
+ * @brief The Iterator to traverse through the SatelliteVector
+ * @version 0.1
+ * @date 2021-11-22
+ */
 #ifndef SATELLITEITERATOR_H
 #define SATELLITEITERATOR_H
 

@@ -1,14 +1,35 @@
+/**
+ * @file LaunchState.cpp
+ * @author Runtime Terror
+ * @brief Implementation of Launch.h
+ * @version 0.1
+ * @date 2021-11-22
+ */
 #include "LaunchState.h"
 
+/**
+ * Constructor
+ * @author Runtime Terror
+ */
 LaunchState::LaunchState(){
 
 }
 
+/**
+ * Destructor
+ * @author Runtime Terror
+ */
 LaunchState::~LaunchState(){
     
 }
 
-
+/**
+ * Will have a different execution state depending on the request
+ * @author Runtime Terror
+ * @param[in] rocket  The rocket calling the request
+ * @param[in] request  The request that the rocket is sending
+ * @return void
+ */
 void LaunchState::handleRequest(Rocket* rocket, string request){
     if (request == "launch"){
         cout<<rocket->getname()<<" has initiated a launch."<<endl;
@@ -117,6 +138,11 @@ void LaunchState::handleRequest(Rocket* rocket, string request){
     }
 }
 
+/**
+ * Get the description of the state
+ * @author Runtime Terror
+ * @return string  description of the state
+ */
 string LaunchState::getString(){
     return "Ready for launch";
 }

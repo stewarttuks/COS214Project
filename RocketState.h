@@ -1,3 +1,10 @@
+/**
+ * @file RocketState.h
+ * @author Runtime Terror
+ * @brief The interface for the state of a rocket.
+ * @version 0.1
+ * @date 2021-11-22
+ */
 #ifndef ROCKETSTATE_H
 #define ROCKETSTATE_H
 
@@ -11,8 +18,6 @@ class Rocket;
 
 class RocketState
 {
-    private:
-
     public:
        RocketState();
        virtual ~RocketState();

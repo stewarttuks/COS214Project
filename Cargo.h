@@ -1,3 +1,10 @@
+/**
+ * @file Cargo.h
+ * @author Runtime Terror
+ * @brief Crates of cargo.
+ * @version 0.1
+ * @date 2021-11-22
+ */
 #ifndef CARGO_H
 #define CARGO_H
 

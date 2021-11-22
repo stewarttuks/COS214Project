@@ -1,3 +1,10 @@
+/**
+ * @file ControlRoom.h
+ * @author Runtime Terror
+ * @brief The interface for the control room and proxy.
+ * @version 0.1
+ * @date 2021-11-22
+ */
 #ifndef CONTROLROOM_H
 #define CONTROLROOM_H
 

@@ -1,3 +1,10 @@
+/**
+ * @file InternetAntenna.h
+ * @author Runtime Terror
+ * @brief Used to communicate with the satellites in orbit.
+ * @version 0.1
+ * @date 2021-11-22
+ */
 #ifndef INTERNETANTENNA_H
 #define INTERNETANTENNA_H
 

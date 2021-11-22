@@ -1,3 +1,10 @@
+/**
+ * @file RocketBuilder.h
+ * @author Runtime Terror
+ * @brief The interface for the builders of rockets.
+ * @version 0.1
+ * @date 2021-11-22
+ */
 #ifndef ROCKETBUILDER_H
 #define ROCKETBUILDER_H
 

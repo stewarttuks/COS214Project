@@ -1,3 +1,10 @@
+/**
+ * @file FalconNineBuilder.h
+ * @author Runtime Terror
+ * @brief Creates and stores a FalconNine rocket.
+ * @version 0.1
+ * @date 2021-11-22
+ */
 #ifndef FALCONNINEBUILDER_H
 #define FALCONNINEBUILDER_H
 
