@@ -34,6 +34,27 @@ void ControlRoom::setReceiver(Rocket* r){
     buttons[2]->setRocket(r);
 }
 
+/**
+ * Only the proxy should protect
+ * @author Runtime Terror
+ * @param[in] c  the control room to protect
+ * @return void
+ */
+void ControlRoom::protect(ControlRoom* c){
+
+}
+
+/**
+ * Only the proxy should authorise a user
+ * @author Runtime Terror
+ * @param[in] u  the username
+ * @param[in] p  the password
+ * @return bool  false
+ */
+bool ControlRoom::authorise(string u, string p){
+    return false;
+}
+
 
 
 

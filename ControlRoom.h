@@ -23,7 +23,7 @@ class ControlRoom
         virtual ~ControlRoom();
         virtual void press(int) = 0;
         void setReceiver(Rocket*);
-        virtual void protect(ControlRoom*);
+        virtual void protect(ControlRoom*) ;
         virtual bool authorise(string, string);
 
     protected:

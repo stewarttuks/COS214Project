@@ -10,15 +10,30 @@
 #include "Dragon.h"
 #include "FalconNine.h"
 #include "FalconHeavy.h"
-
+ 
+/**
+ * Constructor
+ * @author Runtime Terror
+ */
 TestingState::TestingState(){
-
+ 
 }
-
+ 
+/**
+ * Destructor
+ * @author Runtime Terror
+ */
 TestingState::~TestingState(){
-    
+   
 }
-
+ 
+/**
+ * Tests the launch of a rocket
+ * @author Runtime Terror
+ * @param[in] rocket  Pointer to a rocket
+ * @param[in] request  The request to launch
+ * @return void
+ */
 void TestingState::handleRequest(Rocket* rocket, string request){
     if (request == "launch"){
         cout<<"Test Launch for "<<rocket->getname()<<" began..."<<endl;
@@ -70,9 +85,15 @@ void TestingState::handleRequest(Rocket* rocket, string request){
     }
     if (request == "prep"){
         cout<<"***" << rocket->getname() << " has already been prepped.***\n";
-    } 
+    }
 }
-
+ 
+/**
+ * Returns a string representing the state
+ * @author Runtime Terror
+ * @return string  Represents the current state
+ */
 string TestingState::getString(){
     return "Testing";
 }
+

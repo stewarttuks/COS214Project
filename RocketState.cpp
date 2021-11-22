@@ -6,11 +6,20 @@
  * @date 2021-11-22
  */
 #include "RocketState.h"
-
+ 
+/**
+ * Constructor
+ * @author Runtime Terror
+ */
 RocketState::RocketState(){
-
+ 
 }
-
+ 
+/**
+ * Destructor
+ * @author Runtime Terror
+ */
 RocketState::~RocketState(){
-    
+   
 }
+
