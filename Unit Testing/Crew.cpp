@@ -50,7 +50,7 @@ Crew* Crew::clone(){
  */
 string Crew::getgender(){
 
-    if(gender == "Male" || gender == "Female" || gender == "female" || gender == "male"){
+    if(gender == "Male" || gender == "Female" || gender == "female" || gender == "male" || gender == "female"){
         return gender;
     }
 
