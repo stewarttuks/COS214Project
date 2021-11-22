@@ -147,7 +147,7 @@ int main(){
                         valid = false;
                     }
                     else if (numCargo ==0 && numCrew ==0){
-                        cout<<"***You need to send something with on the Spacecraft***\n\n";
+                        cout<<"***You need to send something with the Spacecraft***\n\n";
                         valid = false;
                     }
                     else{
@@ -282,7 +282,7 @@ int main(){
             }
             
             else{
-                cout<<"***Please press a valid button.***\n";
+                cout<<"\n***Please press a valid button.***\n";
             }
         }
 
@@ -338,7 +338,7 @@ int main(){
     }
     
     cout<<"===================================================\n              Session Ended\n===================================================\n";
-    cout<<"Thank you for using our SpaceX launch simulation\n\n";
+    cout<<"\nThank you for using our SpaceX launch simulation\n\n";
 
     cout<<"===================================================\n          COS214 Project - Runtime Terror\n===================================================\n\n";
 

@@ -26,7 +26,7 @@ void Dragon::getSummary(){
     cout << "Contents of " << this->getname() << ": " << endl;
 
     for (auto i = cargo.begin(); i != cargo.end(); i++)      
-            cout << "Crew desription: " << (*i)->getDescription() << endl;
+            cout << "Cargo description: " << (*i)->getDescription() << endl;
 }
 
 string Dragon::getType(){

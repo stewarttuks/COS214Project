@@ -33,14 +33,13 @@ void CrewDragon::getSummary(){
     int p=1;
     for (auto i = crew.begin(); i != crew.end(); i++)      
     {
-        cout << "Crew Member " << p << " (" << (*i)->getgender()<< ") "<< endl;
+        cout << "Crew Member " << p++ << " (" << (*i)->getgender()<< ") "<< endl;
     }
     
     int c =0;
     cout << endl;
     for (auto i = cargo.begin(); i != cargo.end(); i++)      
             cout << "Cargo crate "<< ++c << ": " << (*i)->getDescription() << endl;
-
 }
 
 string CrewDragon::getType(){

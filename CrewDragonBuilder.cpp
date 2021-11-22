@@ -51,7 +51,7 @@ void CrewDragonBuilder::addDragonEngine(){
 }
 
 void CrewDragonBuilder::addCrates(){
-    cout << "Storare room ready for cargo\n";
+    cout << "Storage room ready for cargo\n";
 }
 
 void CrewDragonBuilder::addFuel(){
